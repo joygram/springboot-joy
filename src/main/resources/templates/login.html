@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<script
+			type="text/javascript"
+			charset="utf-8"
+			th:src="@{/js/webix/webix.js}"
+		></script>
+	</head>
+
+	<body>
+		<script type="text/javascript" charset="utf-8">
+			webix.ready(function () {
+				webix.ui({
+					view: "form",
+					id: "login_form",
+					width: 300,
+					elements: [
+						{ view: "text", label: "email", name: "email" },
+						{
+							view: "text",
+							type: "password",
+							label: "Password",
+							name: "password",
+						},
+						{
+							cols: [
+								{ view: "button", value: "login" },
+								{ view: "button", value: "cancel" },
+							],
+						},
+					],
+				});
+			});
+		</script>
+	</body>
+</html>
